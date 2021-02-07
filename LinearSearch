@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void linear_search(int *arr, int size, int var);
+
+int main(void)
+{
+    int arr[] = {1, 6, 4, 7, 2, 8, 5, 3};
+    int size = 8;
+    int var = 75;
+
+    linear_search(arr, size, var);
+}
+
+void linear_search(int *arr, int size, int var)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == var)
+        {
+            printf("%i was found at index %i\n", var, i);
+            break;
+        }
+        else if (i == size - 1 && arr[i] != var)
+        {
+            printf("%i was not found.\n", var);
+        }
+    }
+}
